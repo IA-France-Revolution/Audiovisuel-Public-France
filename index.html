@@ -674,6 +674,270 @@
             }
         }
 
+        /* Social sharing bar */
+        .social-share-bar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 998;
+            background: var(--bg-card);
+            border-radius: 25px;
+            padding: 1rem 0.5rem;
+            box-shadow: var(--shadow-strong);
+            border: 1px solid rgba(0, 85, 164, 0.1);
+            opacity: 0;
+            transform: translateY(-50%) translateX(-100px);
+            transition: var(--transition);
+        }
+
+        .social-share-bar.active {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .social-share-bar .share-title {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .social-share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .social-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .social-btn.twitter:hover {
+            background: #0d8bd9;
+        }
+
+        .social-btn.linkedin {
+            background: #0077B5;
+            color: white;
+        }
+
+        .social-btn.linkedin:hover {
+            background: #005885;
+        }
+
+        .social-btn.facebook {
+            background: #1877F2;
+            color: white;
+        }
+
+        .social-btn.facebook:hover {
+            background: #166fe5;
+        }
+
+        .social-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .social-btn.whatsapp:hover {
+            background: #22c55e;
+        }
+
+        .social-btn.email {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .social-btn.email:hover {
+            background: #d63031;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: linear-gradient(135deg, var(--primary-color), #003d82);
+            color: var(--text-light);
+            margin-top: 4rem;
+            padding: 3rem 1.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--warning-color), var(--primary-color));
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-light);
+            transform: translateX(5px);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo i {
+            color: var(--secondary-color);
+        }
+
+        /* Mobile adjustments for social bar */
+        @media (max-width: 768px) {
+            .social-share-bar {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                top: auto;
+                transform: translateX(-50%);
+                flex-direction: row;
+                padding: 0.75rem 1rem;
+                border-radius: 25px;
+                opacity: 0;
+                transform: translateX(-50%) translateY(100px);
+            }
+
+            .social-share-bar.active {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            .social-share-bar .share-title {
+                writing-mode: horizontal-tb;
+                text-orientation: initial;
+                margin-bottom: 0;
+                margin-right: 1rem;
+                font-size: 0.7rem;
+            }
+
+            .social-share-buttons {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+
+            .social-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
         /* High contrast mode support */
         @media (prefers-contrast: high) {
             :root {
@@ -1011,6 +1275,77 @@
         </section>
     </main>
 
+    <!-- Social sharing bar -->
+    <div class="social-share-bar" id="socialShareBar">
+        <div class="share-title">PARTAGER</div>
+        <div class="social-share-buttons">
+            <a href="#" class="social-btn twitter" data-platform="twitter" aria-label="Partager sur Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-btn linkedin" data-platform="linkedin" aria-label="Partager sur LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn facebook" data-platform="facebook" aria-label="Partager sur Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-btn whatsapp" data-platform="whatsapp" aria-label="Partager sur WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-btn email" data-platform="email" aria-label="Partager par email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI France Revolution</span>
+                </div>
+                <p>AI France Revolution (AIFR) est une initiative dédiée à l'analyse et à la démocratisation de l'information publique grâce à l'intelligence artificielle. Notre mission : rendre les rapports institutionnels accessibles à tous.</p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/aifr" target="_blank" rel="noopener noreferrer" aria-label="Suivre AIFR sur Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/aifr" target="_blank" rel="noopener noreferrer" aria-label="Suivre AIFR sur LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/aifr" target="_blank" rel="noopener noreferrer" aria-label="Code source AIFR sur GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Notre Approche</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Analyse de données publiques</a></li>
+                    <li><a href="#"><i class="fas fa-eye"></i> Transparence démocratique</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Accessibilité citoyenne</a></li>
+                    <li><a href="#"><i class="fas fa-balance-scale"></i> Neutralité politique</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Sources & Méthodologie</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Rapports officiels uniquement</a></li>
+                    <li><a href="#"><i class="fas fa-check-circle"></i> Données vérifiées</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Code open source</a></li>
+                    <li><a href="#"><i class="fas fa-creative-commons"></i> Contenu libre</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI France Revolution. Analyse basée sur le rapport public S2025-1126-1 de la Cour des comptes. 
+            <br>Conception et développement par IA Claude (Anthropic) pour AIFR.</p>
+        </div>
+    </footer>
+
     <button class="scroll-to-top" aria-label="Retour en haut de la page" type="button">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
@@ -1068,6 +1403,12 @@
                 if (scrollBtn) {
                     window.addEventListener('scroll', this.throttle(() => {
                         scrollBtn.classList.toggle('active', window.scrollY > 300);
+                        
+                        // Show/hide social share bar
+                        const socialBar = document.getElementById('socialShareBar');
+                        if (socialBar) {
+                            socialBar.classList.toggle('active', window.scrollY > 500);
+                        }
                     }, 100));
 
                     scrollBtn.addEventListener('click', (e) => {
@@ -1078,6 +1419,9 @@
                         });
                     });
                 }
+
+                // Social sharing functionality
+                this.setupSocialSharing();
 
                 // Smooth scrolling for internal links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1111,6 +1455,71 @@
                         }
                     });
                 }, 250));
+            }
+
+            setupSocialSharing() {
+                const shareData = {
+                    title: 'France Télévisions : Le Compteur Choc du Rapport de la Cour des Comptes',
+                    text: '256 M€ de déficit, 10 500 € de frais de taxi par jour, un risque de dissolution... Découvrez les chiffres qui révèlent la crise de l\'audiovisuel public.',
+                    url: window.location.href,
+                    hashtags: 'FranceTélévisions,CourDesComptes,AudiovisuelPublic,AIFR',
+                    via: 'aifr'
+                };
+
+                document.querySelectorAll('.social-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const platform = btn.getAttribute('data-platform');
+                        this.shareOn(platform, shareData);
+                    });
+                });
+            }
+
+            shareOn(platform, data) {
+                const encodedUrl = encodeURIComponent(data.url);
+                const encodedTitle = encodeURIComponent(data.title);
+                const encodedText = encodeURIComponent(data.text);
+                
+                let shareUrl = '';
+
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}&hashtags=${data.hashtags}&via=${data.via}`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}&summary=${encodedText}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl = `https://wa.me/?text=${encodedText} ${encodedUrl}`;
+                        break;
+                    case 'email':
+                        shareUrl = `mailto:?subject=${encodedTitle}&body=${encodedText}%0A%0A${encodedUrl}%0A%0AAnalyse réalisée par AI France Revolution (@aifr)`;
+                        break;
+                }
+
+                if (shareUrl) {
+                    // Try native sharing first (mobile)
+                    if (platform !== 'email' && navigator.share && /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        navigator.share({
+                            title: data.title,
+                            text: data.text,
+                            url: data.url
+                        }).catch(() => {
+                            // Fallback to opening share URL
+                            window.open(shareUrl, '_blank', 'width=600,height=400');
+                        });
+                    } else {
+                        // Open share URL in new window
+                        if (platform === 'email') {
+                            window.location.href = shareUrl;
+                        } else {
+                            window.open(shareUrl, '_blank', 'width=600,height=400,scrollbars=yes,resizable=yes');
+                        }
+                    }
+                }
             }
 
             setupIntersectionObservers() {
