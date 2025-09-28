@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Social Sharing -->
+    <title>France Télévisions : Le Compteur Choc du Rapport de la Cour des Comptes | L'Infographie Ultime</title>
+    <meta name="description" content="L'infographie ultime sur le rapport de la Cour des Comptes. 256 M€ de déficit, 126 000 € de frais de mission par jour, un risque de dissolution... Découvrez les chiffres qui révèlent la crise de l'audiovisuel public.">
+    <meta name="author" content="AI France Revolution, basé sur le rapport S2025-1126-1 de la Cour des comptes">
+    <meta name="keywords" content="France Télévisions, Cour des comptes, rapport, audiovisuel public, déficit, crise financière, coût, taxi, Salto, france.tv, dépenses publiques">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ia-france-revolution.github.io/Audiovisuel-Public-France/">
+    <meta property="og:title" content="France Télévisions : L'Infographie Choc du Rapport de la Cour des Comptes">
+    <meta property="og:description" content="2,6 Milliards € publics par an, 10 500 € de frais de taxi par jour, un risque de dissolution... Les chiffres qui révèlent la crise de l'audiovisuel public.">
+    <meta property="og:image" content="https://ia-france-revolution.github.io/Audiovisuel-Public-France/assets/img/france-tv-report-og.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ia-france-revolution.github.io/Audiovisuel-Public-France/">
+    <meta property="twitter:title" content="France Télévisions : L'Infographie Choc du Rapport de la Cour des Comptes">
+    <meta property="twitter:description" content="2,6 Milliards € publics par an, 10 500 € de frais de taxi par jour, un risque de dissolution... Les chiffres qui révèlent la crise de l'audiovisuel public.">
+    <meta property="twitter:image" content="https://ia-france-revolution.github.io/Audiovisuel-Public-France/assets/img/france-tv-report-og.webp">
+
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"></noscript>
+    
+    <!-- PWA support -->
+    <meta name="theme-color" content="#0055A4">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <style>
+        :root {
+            --primary-color: #0055A4;
+            --secondary-color: #EF4135;
+            --warning-color: #F39C12;
+            --success-color: #27AE60;
+            --bg-light: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-dark: #212529;
+            --text-light: #fff;
+            --text-muted: #6c757d;
+            --font-stack: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            --shadow-strong: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-intense: 0 8px 32px rgba(0, 0, 0, 0.18);
+            --border-radius: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --animation-duration: 2000ms;
+        }
+
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 20px;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+            border-radius: 4px;
+        }
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Loading state */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(0, 85, 164, 0.1);
+            border-left-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Main container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Hero section with enhanced animations */
+        .hero {
+            min-height: 70vh;
+            max-height: 600px;
+            background: linear-gradient(135deg, rgba(0, 85, 164, 0.85), rgba(239, 65, 53, 0.85)), 
+                        url('https://images.unsplash.com/photo-1593328223628-98c252275727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 900px;
+            animation: heroFadeIn 1.2s ease-out;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            animation: statsSlideUp 1.5s ease-out 0.3s both;
+        }
+
+        @keyframes statsSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-stat {
+            color: var(--text-light);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .hero-stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-stat .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat .label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Enhanced wave animation */
+        .wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23f8f9fa' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,218.7C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e");
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: waveMove 3s ease-in-out infinite;
+        }
+
+        @keyframes waveMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            font-size: 2.5rem;
+            animation: bounce 2.2s infinite;
+            z-index: 5;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .scroll-down:hover {
+            color: var(--warning-color);
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        /* Enhanced sections */
+        .infographic-section {
+            margin-bottom: 5rem;
+            opacity: 0;
+            animation: fadeInSection 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInSection {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Enhanced grid with better responsive behavior */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Enhanced stat cards with micro-animations */
+        .stat-card {
+            background: var(--bg-card);
+            border-left: 6px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-intense);
+        }
+
+        .stat-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .stat-card.critical {
+            border-left-color: var(--secondary-color);
+        }
+
+        .stat-card.critical::before {
+            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+        }
+
+        .stat-card.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .stat-card.warning::before {
+            background: linear-gradient(90deg, transparent, var(--warning-color), transparent);
+        }
+
+        .stat-card-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            min-height: 50px;
+        }
+
+        .stat-card-title i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3px;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover .stat-card-title i {
+            transform: scale(1.1);
+        }
+
+        .stat-card.critical .stat-card-title i {
+            color: var(--secondary-color);
+        }
+
+        .stat-card.warning .stat-card-title i {
+            color: var(--warning-color);
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-top: auto;
+            transition: var(--transition);
+        }
+
+        .stat-card.critical .stat-value {
+            color: var(--secondary-color);
+        }
+
+        .stat-card .stat-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        /* Enhanced chart containers */
+        .chart-container {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 85, 164, 0.08);
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 350px;
+            width: 100%;
+        }
+
+        .chart-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .chart-caption {
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Enhanced about section */
+        .about-section {
+            background: transparent;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 4rem;
+            border-top: 2px solid #ddd;
+        }
+
+        .about-section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            line-height: 1.7;
+            font-size: 1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-credits {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 2rem auto 0 auto;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: var(--shadow);
+            max-width: 600px;
+        }
+
+        .about-credits h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Enhanced scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition);
+            box-shadow: var(--shadow-strong);
+            text-decoration: none;
+            border: none;
+        }
+
+        .scroll-to-top.active {
+            display: flex;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .source-note {
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding: 1rem;
+            background: rgba(0, 85, 164, 0.05);
+            border-radius: var(--border-radius);
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+            main {
+                padding: 1.5rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stat-value {
+                font-size: 2.5rem;
+            }
+            
+            .chart-wrapper {
+                height: 300px;
+            }
+            
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-stats {
+                gap: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .stat-value {
+                font-size: 2.2rem;
+            }
+            
+            .chart-container {
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .scroll-to-top,
+            .scroll-down,
+            .loading {
+                display: none !important;
+            }
+            
+            .hero {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .stat-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .chart-container {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #000080;
+                --secondary-color: #CC0000;
+                --text-dark: #000000;
+                --bg-card: #FFFFFF;
+                --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Loading state -->
+    <div class="loading" id="loading">
+        <div class="spinner" role="status" aria-label="Chargement en cours"></div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">France Télévisions : Le Compteur Choc</h1>
+            <p class="hero-subtitle">La Cour des Comptes révèle l'ampleur de la crise : découvrez la facture salée de l'audiovisuel public.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="value" data-target="2.6" data-suffix=" Md€">2,6 Md€</span>
+                    <span class="label">de Concours Publics en 2024</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="value" data-target="-256" data-suffix=" M€">-256 M€</span>
+                    <span class="label">de Déficit Cumulé (SA 2017-24)</span>
+                </div>
+            </div>
+        </div>
+        <div class="wave"></div>
+        <a href="#main-content" class="scroll-down" aria-label="Découvrir les chiffres">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1: La Crise Financière -->
+        <section id="financial-crisis" class="infographic-section">
+            <h2 class="section-title">
+                <i class="fas fa-funnel-dollar" aria-hidden="true"></i>
+                <span>Acte I : L'Hémorragie Financière</span>
+            </h2>
+            <p class="section-intro">Le rapport qualifie la situation de "critique". Les pertes cumulées et l'érosion des fonds propres menacent la pérennité même de l'entreprise.</p>
+            <div class="stats-grid">
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-chart-line-down" aria-hidden="true"></i>
+                        <span>Chute des Capitaux Propres (SA)</span>
+                    </div>
+                    <p class="stat-value" data-target="179" data-prefix="294 M€ → ">294 M€ → 179 M€</p>
+                    <p class="stat-details">Une baisse "vertigineuse" de 39% en 8 ans, menaçant la solidité de l'entreprise.</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-gavel" aria-hidden="true"></i>
+                        <span>Risque de Dissolution</span>
+                    </div>
+                    <p class="stat-value" data-target="2026" style="font-size: 2.5rem;">Échéance 2026</p>
+                    <p class="stat-details">Les capitaux propres sont sous le seuil légal depuis 2021. L'État doit agir avant fin 2026.</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-wallet" aria-hidden="true"></i>
+                        <span>Trésorerie de Clôture 2024</span>
+                    </div>
+                    <p class="stat-value" data-target="-4.4" data-suffix=" M€">-4,4 M€</p>
+                    <p class="stat-details">Pour la première fois négative, après une chute de 109 M€ en un an.</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                        <span>Perte d'Exploitation Prévue 2025</span>
+                    </div>
+                    <p class="stat-value" data-target="-49.4" data-suffix=" M€">-49,4 M€</p>
+                    <p class="stat-details">Le budget prévisionnel confirme que l'entreprise continue de creuser ses pertes.</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-minus-circle" aria-hidden="true"></i>
+                        <span>Déficit Net Cumulé (SA 2017-24)</span>
+                    </div>
+                    <p class="stat-value" data-target="-256" data-suffix=" M€">-256 M€</p>
+                    <p class="stat-details">Le déficit cumulé de la société mère sur 8 ans, trois fois plus élevé que celui du groupe.</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-video-slash" aria-hidden="true"></i>
+                        <span>Coût de l'Échec Salto</span>
+                    </div>
+                    <p class="stat-value" data-target="-57.7" data-suffix=" M€">-57,7 M€</p>
+                    <p class="stat-details">Perte nette pour le groupe de cette plateforme SVOD qui devait concurrencer Netflix.</p>
+                </article>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="section-title" style="font-size: 1.5rem;">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                    Évolution Annuelle des Déficits (Résultat Net en M€)
+                </h3>
+                <div class="chart-wrapper">
+                    <div class="chart-loading">
+                        <div class="spinner"></div>
+                        <span>Chargement du graphique...</span>
+                    </div>
+                    <canvas id="deficitChart" aria-label="Graphique montrant l'évolution des déficits de France Télévisions de 2017 à 2024"></canvas>
+                </div>
+                <p class="chart-caption">La courbe des résultats nets montre des pertes massives et récurrentes, notamment pour la SA (en rouge), illustrant une hémorragie financière que les quelques années de bénéfice ne compensent pas.</p>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="section-title" style="font-size: 1.5rem;">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    Chute des Capitaux Propres vs Seuil Légal (SA)
+                </h3>
+                <div class="chart-wrapper">
+                    <div class="chart-loading">
+                        <div class="spinner"></div>
+                        <span>Chargement du graphique...</span>
+                    </div>
+                    <canvas id="equityChart" aria-label="Graphique montrant la chute des capitaux propres par rapport au seuil légal"></canvas>
+                </div>
+                <p class="chart-caption">La ligne rouge représente le seuil légal (50% du capital social). Depuis 2021, les capitaux propres (en bleu) sont passés en dessous, activant une obligation légale de redressement.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Le Fardeau Social -->
+        <section id="hr-costs" class="infographic-section">
+            <h2 class="section-title">
+                <i class="fas fa-users-cog" aria-hidden="true"></i>
+                <span>Acte II : Le Fardeau du Cadre Social</span>
+            </h2>
+            <p class="section-intro">L'accord collectif de 2013 est identifié comme un frein majeur, générant des surcoûts structurels massifs et une déconnexion totale entre les effectifs et les charges.</p>
+            <div class="stats-grid">
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-people-arrows" aria-hidden="true"></i>
+                        <span>Déconnexion Effectifs / Salaires</span>
+                    </div>
+                    <p class="stat-value" data-target="-1.95" data-prefix="-10,3% vs " style="font-size:1.8rem;">-10,3% vs -1,95%</p>
+                    <p class="stat-details">Malgré une forte baisse des effectifs, la masse salariale n'a quasiment pas bougé (2017-2023).</p>
+                </article>
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i>
+                        <span>Surcoût Annuel de l'Accord Collectif</span>
+                    </div>
+                    <p class="stat-value" data-target="61.9" data-suffix=" M€">61,9 M€</p>
+                    <p class="stat-details">Estimation (IGF) des surcoûts annuels par rapport à la convention nationale.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
+                        <span>Indemnités de Licenciement (2017-24)</span>
+                    </div>
+                    <p class="stat-value" data-target="133" data-suffix=" M€">133 M€</p>
+                    <p class="stat-details">Un régime "largement plus favorable" que le droit commun, coûtant 16,7 M€ par an.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-comments-dollar" aria-hidden="true"></i>
+                        <span>Coût du Dialogue Social</span>
+                    </div>
+                    <p class="stat-value" data-target="70" data-suffix=" ETP/an">70 ETP/an</p>
+                    <p class="stat-details">Le temps de travail consacré au dialogue social formel dans le seul réseau France 3.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>Subventions CSE (2024)</span>
+                    </div>
+                    <p class="stat-value" data-target="14.2" data-suffix=" M€">14,2 M€</p>
+                    <p class="stat-details">Charge annuelle pour les activités sociales et culturelles, soit 2,2% de la masse salariale.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                        <span>Coût des Expertises CSE</span>
+                    </div>
+                    <p class="stat-value" data-target="770298" data-suffix=" €/an">770 298 €/an</p>
+                    <p class="stat-details">Coût moyen annuel des expertises demandées par les syndicats (65 557 € par expertise).</p>
+                </article>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="section-title" style="font-size: 1.5rem;">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    La Déconnexion en Courbes (2017-2023)
+                </h3>
+                <div class="chart-wrapper">
+                    <div class="chart-loading">
+                        <div class="spinner"></div>
+                        <span>Chargement du graphique...</span>
+                    </div>
+                    <canvas id="hrChart" aria-label="Graphique montrant la déconnexion entre l'évolution des effectifs et de la masse salariale"></canvas>
+                </div>
+                <p class="chart-caption">La courbe des effectifs (en bleu) plonge, tandis que celle de la masse salariale (en rouge) stagne. L'augmentation mécanique des salaires liée à l'ancienneté annule les économies de personnel.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Dépenses de Fonctionnement -->
+        <section id="operating-expenses" class="infographic-section">
+            <h2 class="section-title">
+                <i class="fas fa-receipt" aria-hidden="true"></i>
+                <span>Acte III : Des Dépenses "Choc" au Quotidien</span>
+            </h2>
+            <p class="section-intro">Certaines dépenses courantes, pointées par la Cour, illustrent des pratiques jugées peu optimales au vu de la situation financière de l'entreprise.</p>
+            <div class="stats-grid">
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-taxi" aria-hidden="true"></i>
+                        <span>Frais de Taxi & VTC en 2024</span>
+                    </div>
+                    <p class="stat-value" data-target="10500" data-prefix="~" data-suffix=" € / jour">~10 500 € / jour</p>
+                    <p class="stat-details">Pour un total annuel de 3,8 M€. Un recours "intensif" pour un usage qui devrait être exceptionnel.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-gas-pump" aria-hidden="true"></i>
+                        <span>Plafond Journalier Carburant</span>
+                    </div>
+                    <p class="stat-value" data-target="120" data-suffix=" L/jour">120 L/jour</p>
+                    <p class="stat-details">Plafond des cartes carburant jugé "excessif" par la Cour pour plus de 1000 véhicules.</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-card-title">
+                        <i class="fas fa-concierge-bell" aria-hidden="true"></i>
+                        <span>Frais de Mission & Réception (2024)</span>
+                    </div>
+                    <p class="stat-value" data-target="126000" data-prefix="~" data-suffix=" € / jour">~126 000 € / jour</p>
+                    <p class="stat-details">Soit 46 M€ annuels. La Cour note de nombreuses "dérogations aux plafonds" des nuitées d'hôtel.</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-card-title">
+                        <i class="fas fa-car" aria-hidden="true"></i>
+                        <span>Véhicules de Fonction (Cadres parisiens)</span>
+                    </div>
+                    <p class="stat-value" data-target="1.72" data-suffix=" M€">1,72 M€</p>
+                    <p class="stat-details">Valeur d'achat cumulée pour plus de 50 cadres, dont l'utilité et l'intérêt financier sont questionnés.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-wine-glass" aria-hidden="true"></i>
+                        <span>Frais de Réception & Achats Alimentaires</span>
+                    </div>
+                    <p class="stat-value" data-target="3.2" data-suffix=" M€">3,2 M€</p>
+                    <p class="stat-details">Montant 2023 des frais de réception et achats alimentaires (dont boissons) sur le compte 625401.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-chart-line-up" aria-hidden="true"></i>
+                        <span>Explosion des Charges Courantes</span>
+                    </div>
+                    <p class="stat-value" data-target="34" data-suffix=" %">+34 %</p>
+                    <p class="stat-details">Augmentation des charges d'exploitation entre 2019-2024 (de 1 572 M€ à 2 107 M€).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 4: Inefficacité -->
+        <section id="inefficiency" class="infographic-section">
+            <h2 class="section-title">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+                <span>Acte IV : Échecs Stratégiques et Inefficacité</span>
+            </h2>
+            <p class="section-intro">Au-delà des dépenses, les décisions stratégiques et l'organisation de la production ont généré des coûts et des manques à gagner significatifs.</p>
+            <div class="stats-grid">
+                <article class="stat-card critical">
+                    <div class="stat-card-title">
+                        <i class="fas fa-video-slash" aria-hidden="true"></i>
+                        <span>Perte Nette de l'Échec Salto</span>
+                    </div>
+                    <p class="stat-value" data-target="-57.7" data-suffix=" M€">-57,7 M€</p>
+                    <p class="stat-details">Coût final de la plateforme SVOD pour le groupe France Télévisions. Des moyens qui "auraient pu être investis autrement".</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <span>Équilibre du Projet Campus</span>
+                    </div>
+                    <p class="stat-value" data-target="2035" style="font-size: 2.5rem;">Pas avant 2035</p>
+                    <p class="stat-details">Le regroupement des sites parisiens n'atteindra son équilibre financier global qu'après plus d'une décennie.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-sun" aria-hidden="true"></i>
+                        <span>Surcoût Studios "Un si grand soleil"</span>
+                    </div>
+                    <p class="stat-value" data-target="1.9" data-suffix=" M€ / saison">1,9 M€ / saison</p>
+                    <p class="stat-details">Coût annuel estimé de la sous-utilisation des studios de Vendargues pour le feuilleton.</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-card-title">
+                        <i class="fas fa-radio" aria-hidden="true"></i>
+                        <span>Rapprochement F3 / France Bleu</span>
+                    </div>
+                    <p class="stat-value" data-target="10" data-prefix="< 10" style="font-size: 2.5rem;">< 10 villes / 62</p>
+                    <p class="stat-details">Le projet de mutualisation des réseaux de proximité, pourtant jugé crucial, progresse très lentement.</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-hammer" aria-hidden="true"></i>
+                        <span>Investissements Immobiliers (2017-24)</span>
+                    </div>
+                    <p class="stat-value" data-target="158" data-suffix=" M€">158 M€</p>
+                    <p class="stat-details">Montant total des investissements immobiliers réalisés sur la période, patrimoine de 295 000 m².</p>
+                </article>
+                <article class="stat-card warning">
+                    <div class="stat-card-title">
+                        <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                        <span>Gains de Productivité Non Réalisés</span>
+                    </div>
+                    <p class="stat-value" data-target="8.8" data-suffix=" M€">8,8 M€</p>
+                    <p class="stat-details">Estimation des gains réalisables par une meilleure planification de l'activité dans les antennes France 3.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h3>À Propos de cette Analyse</h3>
+            <div class="about-content">
+                <p>Cette infographie est une synthèse visuelle du <strong>Rapport d'observations définitives S2025-1126-1 de la Cour des comptes sur France Télévisions</strong> (Exercices 2017-2024). Son objectif est de rendre accessibles les données les plus marquantes sur la situation de l'audiovisuel public français.</p>
+                <div class="about-credits">
+                    <h4>Conception et Réalisation</h4>
+                    <p><strong>AI France Revolution</strong></p>
+                </div>
+            </div>
+            <p class="source-note">Source : Toutes les données sont extraites du rapport public de la Cour des comptes S2025-1126-1, délibéré le 10 juillet 2025.</p>
+        </section>
+    </main>
+
+    <button class="scroll-to-top" aria-label="Retour en haut de la page" type="button">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Load FontAwesome asynchronously -->
+    <script>
+        (function() {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+            link.onload = function() {
+                document.getElementById('loading').classList.add('hidden');
+            };
+            document.head.appendChild(link);
+        })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        class FranceTVInfographic {
+            constructor() {
+                this.reportData = {
+                    deficits: {
+                        years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        groupNetResult: [6.9, -89.3, 26.44, 18.2, -11.9, -47.9, 13.6, 2.4],
+                        saNetResult: [-20.98, -127.83, 20.93, 11.16, -80.25, -101.64, 35.09, 7.47]
+                    },
+                    equity: {
+                        years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                        values: [294, 201, 222, 233, 179.2, 101.6, 136.1, 179.3], 
+                        socialCapitalHalf: 189.2 
+                    },
+                    hr: {
+                        years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                        staffChange: [0, -2.3, -4.0, -8.3, -8.1, -9.1, -10.3],
+                        payrollChange: [0, 2.2, -0.2, -6.4, -4.5, -2.6, -1.95]
+                    }
+                };
+
+                this.charts = new Map();
+                this.observersSetup = false;
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.setupIntersectionObservers();
+                this.initializeCharts();
+                this.hideLoading();
+            }
+
+            setupEventListeners() {
+                // Enhanced scroll to top functionality
+                const scrollBtn = document.querySelector('.scroll-to-top');
+                if (scrollBtn) {
+                    window.addEventListener('scroll', this.throttle(() => {
+                        scrollBtn.classList.toggle('active', window.scrollY > 300);
+                    }, 100));
+
+                    scrollBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        window.scrollTo({ 
+                            top: 0, 
+                            behavior: 'smooth' 
+                        });
+                    });
+                }
+
+                // Smooth scrolling for internal links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(anchor.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+
+                // Keyboard navigation improvements
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const focusedElement = document.activeElement;
+                        if (focusedElement && focusedElement !== document.body) {
+                            focusedElement.blur();
+                        }
+                    }
+                });
+
+                // Resize handler for charts
+                window.addEventListener('resize', this.debounce(() => {
+                    this.charts.forEach(chart => {
+                        if (chart) {
+                            chart.resize();
+                        }
+                    });
+                }, 250));
+            }
+
+            setupIntersectionObservers() {
+                if (this.observersSetup) return;
+
+                // Counter animations
+                const counterObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                            this.animateCounter(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5, rootMargin: '0px 0px -50px 0px' });
+
+                document.querySelectorAll('.stat-value, .hero-stat .value').forEach(counter => {
+                    counterObserver.observe(counter);
+                });
+
+                // Section animations
+                const sectionObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationDelay = '0ms';
+                            entry.target.style.animationPlayState = 'running';
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+
+                document.querySelectorAll('.infographic-section').forEach(section => {
+                    sectionObserver.observe(section);
+                });
+
+                this.observersSetup = true;
+            }
+
+            animateCounter(counter) {
+                if (counter.classList.contains('animated')) return;
+                
+                counter.classList.add('animated');
+                const targetStr = counter.getAttribute('data-target');
+                if (!targetStr) return;
+
+                const target = parseFloat(targetStr);
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const prefix = counter.getAttribute('data-prefix') || '';
+                const duration = 2000;
+                
+                let startTimestamp = null;
+                const startValue = 0;
+
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+                    const current = startValue + easeOutCubic * (target - startValue);
+
+                    let formattedValue;
+                    if (Math.abs(target) < 10 && !Number.isInteger(target)) {
+                        formattedValue = current.toFixed(1);
+                    } else {
+                        formattedValue = Math.round(current).toLocaleString('fr-FR');
+                    }
+                    
+                    counter.innerHTML = `${prefix}${formattedValue}${suffix}`;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    }
+                };
+                
+                requestAnimationFrame(step);
+            }
+
+            initializeCharts() {
+                const defaultOptions = this.getDefaultChartOptions();
+                
+                // Initialize charts with loading states
+                this.initDeficitChart(defaultOptions);
+                this.initEquityChart(defaultOptions);
+                this.initHRChart(defaultOptions);
+            }
+
+            getDefaultChartOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutCubic'
+                    },
+                    plugins: {
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#ffffff',
+                            bodyColor: '#ffffff',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            bodyFont: { weight: 'bold' },
+                            titleFont: { weight: 'bold' },
+                            padding: 12
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: { weight: '600' },
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { 
+                                display: false 
+                            },
+                            ticks: {
+                                font: { weight: '600' }
+                            }
+                        },
+                        y: {
+                            grid: { 
+                                color: 'rgba(0, 85, 164, 0.1)' 
+                            },
+                            ticks: {
+                                callback: value => `${value} M€`,
+                                font: { weight: '600' }
+                            }
+                        }
+                    }
+                };
+            }
+
+            initDeficitChart(defaultOptions) {
+                const ctx = document.getElementById('deficitChart');
+                if (!ctx) return;
+
+                try {
+                    this.hideChartLoading('deficitChart');
+                    
+                    const chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: this.reportData.deficits.years,
+                            datasets: [
+                                {
+                                    label: 'Résultat Net Groupe',
+                                    data: this.reportData.deficits.groupNetResult,
+                                    backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                                    borderColor: '#3498DB',
+                                    borderWidth: 2,
+                                    borderRadius: 4,
+                                    borderSkipped: false,
+                                },
+                                {
+                                    label: 'Résultat Net SA',
+                                    data: this.reportData.deficits.saNetResult,
+                                    backgroundColor: 'rgba(239, 65, 53, 0.8)',
+                                    borderColor: '#EF4135',
+                                    borderWidth: 2,
+                                    borderRadius: 4,
+                                    borderSkipped: false,
+                                }
+                            ]
+                        },
+                        options: {
+                            ...defaultOptions,
+                            plugins: {
+                                ...defaultOptions.plugins,
+                                tooltip: {
+                                    ...defaultOptions.plugins.tooltip,
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed.y;
+                                            const sign = value >= 0 ? '+' : '';
+                                            return `${context.dataset.label}: ${sign}${value} M€`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    
+                    this.charts.set('deficit', chart);
+                } catch (error) {
+                    this.handleChartError('deficitChart', error);
+                }
+            }
+
+            initEquityChart(defaultOptions) {
+                const ctx = document.getElementById('equityChart');
+                if (!ctx) return;
+
+                try {
+                    this.hideChartLoading('equityChart');
+                    
+                    const chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: this.reportData.equity.years,
+                            datasets: [{
+                                label: 'Capitaux Propres SA',
+                                data: this.reportData.equity.values,
+                                borderColor: 'rgb(0, 85, 164)',
+                                backgroundColor: 'rgba(0, 85, 164, 0.1)',
+                                fill: true,
+                                tension: 0.3,
+                                borderWidth: 3,
+                                pointRadius: 6,
+                                pointHoverRadius: 8,
+                                pointBackgroundColor: 'rgb(0, 85, 164)',
+                                pointBorderColor: '#ffffff',
+                                pointBorderWidth: 2
+                            }, {
+                                label: 'Seuil Légal (50% Capital Social)',
+                                data: Array(this.reportData.equity.years.length).fill(this.reportData.equity.socialCapitalHalf),
+                                borderColor: 'rgb(239, 65, 53)',
+                                borderDash: [8, 6],
+                                fill: false,
+                                borderWidth: 3,
+                                pointRadius: 0,
+                                pointHoverRadius: 0
+                            }]
+                        },
+                        options: {
+                            ...defaultOptions,
+                            plugins: {
+                                ...defaultOptions.plugins,
+                                tooltip: {
+                                    ...defaultOptions.plugins.tooltip,
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed.y;
+                                            return `${context.dataset.label}: ${value} M€`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    
+                    this.charts.set('equity', chart);
+                } catch (error) {
+                    this.handleChartError('equityChart', error);
+                }
+            }
+
+            initHRChart(defaultOptions) {
+                const ctx = document.getElementById('hrChart');
+                if (!ctx) return;
+
+                try {
+                    this.hideChartLoading('hrChart');
+                    
+                    const chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: this.reportData.hr.years,
+                            datasets: [
+                                {
+                                    label: 'Var. Cumulée Effectifs',
+                                    data: this.reportData.hr.staffChange,
+                                    borderColor: 'rgb(0, 85, 164)',
+                                    backgroundColor: 'rgba(0, 85, 164, 0.1)',
+                                    borderWidth: 3,
+                                    tension: 0.1,
+                                    pointRadius: 6,
+                                    pointHoverRadius: 8,
+                                    pointBackgroundColor: 'rgb(0, 85, 164)',
+                                    pointBorderColor: '#ffffff',
+                                    pointBorderWidth: 2,
+                                    fill: true
+                                },
+                                {
+                                    label: 'Var. Cumulée Masse Salariale',
+                                    data: this.reportData.hr.payrollChange,
+                                    borderColor: 'rgb(239, 65, 53)',
+                                    backgroundColor: 'rgba(239, 65, 53, 0.1)',
+                                    borderWidth: 3,
+                                    tension: 0.1,
+                                    pointRadius: 6,
+                                    pointHoverRadius: 8,
+                                    pointBackgroundColor: 'rgb(239, 65, 53)',
+                                    pointBorderColor: '#ffffff',
+                                    pointBorderWidth: 2,
+                                    fill: true
+                                }
+                            ]
+                        },
+                        options: {
+                            ...defaultOptions,
+                            scales: {
+                                ...defaultOptions.scales,
+                                y: {
+                                    ...defaultOptions.scales.y,
+                                    ticks: {
+                                        callback: value => `${value.toFixed(1)}%`,
+                                        font: { weight: '600' }
+                                    }
+                                }
+                            },
+                            plugins: {
+                                ...defaultOptions.plugins,
+                                tooltip: {
+                                    ...defaultOptions.plugins.tooltip,
+                                    callbacks: {
+                                        label: function(context) {
+                                            const value = context.parsed.y;
+                                            const sign = value >= 0 ? '+' : '';
+                                            return `${context.dataset.label}: ${sign}${value.toFixed(1)}%`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    
+                    this.charts.set('hr', chart);
+                } catch (error) {
+                    this.handleChartError('hrChart', error);
+                }
+            }
+
+            hideChartLoading(chartId) {
+                const loadingElement = document.querySelector(`#${chartId}`).parentNode.querySelector('.chart-loading');
+                if (loadingElement) {
+                    loadingElement.style.display = 'none';
+                }
+            }
+
+            handleChartError(chartId, error) {
+                console.error(`Error initializing ${chartId}:`, error);
+                const container = document.querySelector(`#${chartId}`).parentNode;
+                const loadingElement = container.querySelector('.chart-loading');
+                if (loadingElement) {
+                    loadingElement.innerHTML = `
+                        <div style="color: var(--secondary-color); text-align: center;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Erreur lors du chargement du graphique</p>
+                        </div>
+                    `;
+                }
+            }
+
+            hideLoading() {
+                const loadingEl = document.getElementById('loading');
+                if (loadingEl) {
+                    setTimeout(() => {
+                        loadingEl.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }
+            }
+
+            // Utility functions
+            throttle(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                }
+            }
+
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                new FranceTVInfographic();
+            } catch (error) {
+                console.error('Failed to initialize France TV Infographic:', error);
+                // Hide loading screen even if initialization fails
+                const loadingEl = document.getElementById('loading');
+                if (loadingEl) {
+                    loadingEl.classList.add('hidden');
+                }
+            }
+        });
+
+        // Service worker registration for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // You can implement a service worker here for offline capabilities
+                console.log('Service Worker support detected');
+            });
+        }
+    </script>
+</body>
+</html>
